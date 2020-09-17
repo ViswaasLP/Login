@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: blanchedalmond;
+}
+
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    
+}
+
+.box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: lightcoral;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box .inputBox{
+    position: relative;
+
+}
+
+.box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: blanchedalmond;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid blanchedalmond;
+    outline: none;
+    background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+
+    
+
+}
+
+.box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: blanchedalmond  ;
+    pointer-events: none;
+    transition: .5%;
+    font-family: 'Courier New', Courier, monospace;
+
+    
+    
+
+}
+
+.box label{
+    font-size: 10px;
+    color: blanchedalmond  ;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label
+
+{
+    top: -18px;
+    left: 0;
+    color: blanchedalmond;
+    font-size: 12px;
+}
+
+.box input[type="submit"]{
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-family: 'Courier New', Courier, monospace;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #000000;
+    background: blanchedalmond;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
