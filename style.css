@@ -33,15 +33,14 @@ body{
 }
 
 .box .inputBox input{
-    width: 100%;
+    
     padding: 10px 0;
     font-size: 16px;
-    color: blanchedalmond;
+    border-radius: 10px;
     margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid blanchedalmond;
-    outline: none;
-    background: transparent;
+    border: 1px solid blanchedalmond;
+    outline-color: blue;
+    
     font-family: 'Courier New', Courier, monospace;
 
     
@@ -49,14 +48,12 @@ body{
 }
 
 .box .inputBox label{
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
+    
+    
     font-size: 16px;
     color: blanchedalmond  ;
-    pointer-events: none;
-    transition: .5%;
+ 
+    
     font-family: 'Courier New', Courier, monospace;
 
     
@@ -64,20 +61,6 @@ body{
 
 }
 
-.box label{
-    font-size: 10px;
-    color: blanchedalmond  ;
-}
-
-.box .inputBox input:focus ~ label,
-.box .inputBox input:valid ~ label
-
-{
-    top: -18px;
-    left: 0;
-    color: blanchedalmond;
-    font-size: 12px;
-}
 
 .box input[type="submit"]{
     left: 50%;
@@ -86,13 +69,29 @@ body{
     font-family: 'Courier New', Courier, monospace;
 
     background: transparent;
-    border: none;
-    outline: none;
+    outline-color: blue;
     color: #000000;
-    background: blanchedalmond;
+    background: #ffebcd;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
 
 }
 
+.box input[type="submit"]:focus{
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    font-family: 'Courier New', Courier, monospace;
+
+    background: transparent;
+    outline-color: blue;
+    color: #000000;
+    background: #75FF75;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+*/
