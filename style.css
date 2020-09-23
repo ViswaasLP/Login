@@ -1,97 +1,126 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: blanchedalmond;
-}
 
-.box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    padding: 40px;
-    background: rgba(0,0,0,0.8);
+
+*{
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
-    border-radius: 10px;
-    
 }
 
-.box h2{
-    margin: 0 0 30px;
-    padding: 0;
-    color: lightcoral;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+body{
+    background-color: blanchedalmond;
+    font-family: 'Montserrat', sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
-.box .inputBox{
+.container{
+    background-color:rgba(0, 0, 0, 0.527);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.527);
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.header{
+    background-color: #black;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+
+.header h2{
+    margin: 0;
+    color: blanchedalmond;
+}
+
+.form{
+    padding: 30px 40px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    color: blanchedalmond;
+}
+
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 8px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+}
+
+.form-control.success input{
+    border-color: #2ecc71;
 
 }
 
-.box .inputBox input{
-    
-    padding: 10px 0;
-    font-size: 16px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    border: 1px solid blanchedalmond;
-    outline-color: blue;
-    
-    font-family: 'Courier New', Courier, monospace;
-
-    
-
-}
-
-.box .inputBox label{
-    
-    
-    font-size: 16px;
-    color: blanchedalmond  ;
- 
-    
-    font-family: 'Courier New', Courier, monospace;
-
-    
-    
-
+.form-control.error input{
+    border-color: #e74c3c;
 }
 
 
-.box input[type="submit"]{
-    left: 50%;
+.form-control i{
+    visibility: hidden;
     position: absolute;
-    transform: translate(-50%,-50%);
-    font-family: 'Courier New', Courier, monospace;
+    top: 40px;
+    right: 10px;
+}
 
-    background: transparent;
-    outline-color: blue;
-    color: #000000;
-    background: #ffebcd;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+    color:  #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color:  #e74c3c;
+}
+
+
+.form-control small{
+    visibility: hidden;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color:  #e74c3c;
 
 }
 
-.box input[type="submit"]:focus{
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    font-family: 'Courier New', Courier, monospace;
-
-    background: transparent;
-    outline-color: blue;
-    color: #000000;
-    background: #75FF75;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-
+.form button{
+    background-color: blanchedalmond;
+    border: 2px solid blanchedalmond;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 8px;
+    font-size: 16px;
+    color: blac;
+    display: block;
+    padding: 10px;
+    width: 100%;
 }
 
-*/
+.form .message {
+    margin: 15px 0 0;
+    color: blanchedalmond;
+    font-size: 12px;
+  }
+  .form .message a {
+    color: blanchedalmond;
+    text-decoration: none;
+    text-decoration: underline;
+  }

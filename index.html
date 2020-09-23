@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html>
+
     <head>
-        <title>Login</title>
-        <link rel = "stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script defer src="validity.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     </head>
     <body>
-        <div class = "box">
-            <h2>Login</h2>
-            <form>
-                <div class = "inputBox">
+        <div class="container">
+            <div class="header">
+                <h2>Login</h2>
+            </div>
+            
+            <form class = "form" id = "form">
+                
+                <div class="form-control">
                     <label for="username">Username</label>
-                    <input type = "text" name = "" required = "" id = "username" placeholder="username">
-                    
-
+                    <input type="text" placeholder="username" id = "username">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small>Error message</small>
                 </div>
-                <div class = "inputBox">
+                <div class="form-control">
                     <label for="password">Password</label>
-                    <input type = "password" name = "" required = "" id = "password" placeholder = "password">
-                    
-
+                    <input type="password" placeholder="password" id = "password">
+                    <i class="fas fa-check-circle    "></i>
+                    <i class="fas fa-exclamation-circle    "></i>
+                    <small>Password must include one capital letter, one lower case letter, and at least one number.</small>
                 </div>
-                <input type = "submit" name = "" value = "Login">
-
+               
+                <button type = "submit">Login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
             </form>
         </div>
-
     </body>
 </html>
