@@ -71,18 +71,6 @@ body{
     border-color: #e74c3c;
 }
 
-.form-control.nolow input{
-    border-color: #e74c3c;
-}
-.form-control.noup input{
-    border-color: #e74c3c;
-}
-.form-control.nonum input{
-    border-color: #e74c3c;
-}
-.form-control.nomatch input{
-    border-color: #e74c3c;
-}
 .form-control.noeight input{
     border-color: #e74c3c;
 }
@@ -102,7 +90,7 @@ body{
 
 
 .form-control small{
-    visibility: hidden;
+    display: none;
     position: relative;
     bottom: 0;
     left: 0;
@@ -110,6 +98,7 @@ body{
 
 .form-control.blank small{
     visibility: visible;
+    display: inline;
     color:  #e74c3c;
 
 }
