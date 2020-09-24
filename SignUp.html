@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-        <script defer src="validity.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <script defer src="SignUp.js"></script>
+        <link rel="stylesheet" href="SignUpStyle.css">
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     </head>
@@ -19,55 +19,55 @@
             </div>
             
             <form class = "form" id = "form">
-                
+                <h5>* indicates required fields.</h5>
                 <div class="form-control">
-                    <label for="first">First Name</label>
-                    <input type="text" placeholder="ex. John" id = "first">
+                    <label for="first">First Name*</label>
+                    <input aria-describedby="firstName" type="text" placeholder="ex. John" id = "first">
                     <i class="fas fa-check-circle    "></i>
                     <i class="fas fa-exclamation-circle    "></i>
-                    <small>Error message</small>
+                    <small id="firstName" aria-hidden="true">Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="last">Last Name</label>
-                    <input type="text" placeholder="ex. Doe" id = "last">
+                    <label for="last">Last Name*</label>
+                    <input aria-describedby="lastName" type="text" placeholder="ex. Doe" id = "last">
                     <i class="fas fa-check-circle    "></i>
                     <i class="fas fa-exclamation-circle    "></i>
-                    <small>Error message</small>
+                    <small id = "lastName" aria-hidden="true">Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="username">Username</label>
-                    <input type="text" placeholder="ex. johndoe" id = "username">
+                    <label for="username">Username*</label>
+                    <input aria-describedby="user" type="text" placeholder="ex. johndoe" id = "username">
                     <i class="fas fa-check-circle    "></i>
                     <i class="fas fa-exclamation-circle    "></i>
-                    <small>Error message</small>
+                    <small id = "user" aria-hidden="true">Error message</small>
                 </div>
                 <div class="form-control">
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="Type password" id = "password">
+                    <label for="password">Password*</label>
+                    <input aria-describedby="pass passwordLists" type="password" placeholder="Type password" id = "password">
                     <i class="fas fa-check-circle    "></i>
                     <i class="fas fa-exclamation-circle    "></i>
-                    <small>Error message</small>               
-                    <figure>
-                        <figcaption style="color: black;">Password must contain</figcaption>
+                    <small id = "pass" aria-hidden="true">Error message</small>               
+                    <figure id = "passwordLists">
+                        <figcaption style="color: black;">Password must contain atleast</figcaption>
                     <ul>
-                    <li class="lowercase-char">At least one lowercase character</li>
-                    <li class="uppercase-char">At least one uppercase character</li>
-                    <li class="number-char">At least one number</li>
-                    <li class="eight-char">At least 8 characters</li>
+                    <li class="lowercase-char">one lowercase character [a-z]</li>
+                    <li class="uppercase-char">one uppercase character [A-Z]</li>
+                    <li class="number-char">one number [0-9]</li>
+                    <li class="eight-char">8 characters</li>
                     </ul>
                     </figure>
                 
                 </div>
                 <div class="form-control">
-                    <label for="password2"> Confirm Password</label>
-                    <input type="password" placeholder="Re-type password" id = "password2">
+                    <label for="password2"> Confirm Password*</label>
+                    <input aria-describedby="confirmPassword" type="password" placeholder="Re-type password" id = "password2">
                     <i class="fas fa-check-circle    "></i>
                     <i class="fas fa-exclamation-circle    "></i>
-                    <small>Password must include one capital letter, one lower case letter, and at least one number.</small>
+                    <small id = "confirmPassword" aria-hidden="true" >Error message.</small>
                 </div>
                
                 <button type = "submit">Create account</button>
-                <p class="message">Already have an account? <a href="index.html" >Sign In</a></p>
+                <p class="message">Already have an account? <a href="Login.html" >Sign In</a></p>
             </form>
         </div>
     </body>
