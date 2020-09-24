@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: blanchedalmond;
+    background-color: #0d191a;
     font-family: 'Montserrat', sans-serif;
     display:flex;
     align-items: center;
@@ -15,23 +15,24 @@ body{
 }
 
 .container{
-    background-color:rgba(0, 0, 0, 0.527);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.527);
-    width: 400px;
+    border-radius: 8px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(255, 255, 255);
+    width: 500px;
     max-width: 100%;
     overflow: hidden;
 
 }
 
 .header{
-    background-color: #black;
-    border-bottom: 1px solid #f0f0f0;
+    background-color: white;
+    border-bottom: 1px solid black;
     padding: 20px 40px;
 }
 
 .header h2{
     margin: 0;
-    color: blanchedalmond;
+    color: #0d191a;
 }
 
 .form{
@@ -47,11 +48,11 @@ body{
 .form-control label{
     display: inline-block;
     margin-bottom: 5px;
-    color: blanchedalmond;
+    color: #0d191a;
 }
 
 .form-control input{
-    border: 2px solid #f0f0f0;
+    border: 2px solid black;
     border-radius: 8px;
     display: block;
     font-family: 'Montserrat', sans-serif;
@@ -66,11 +67,25 @@ body{
 
 }
 
-.form-control.error input{
+.form-control.blank input{
     border-color: #e74c3c;
 }
 
-
+.form-control.nolow input{
+    border-color: #e74c3c;
+}
+.form-control.noup input{
+    border-color: #e74c3c;
+}
+.form-control.nonum input{
+    border-color: #e74c3c;
+}
+.form-control.nomatch input{
+    border-color: #e74c3c;
+}
+.form-control.noeight input{
+    border-color: #e74c3c;
+}
 .form-control i{
     visibility: hidden;
     position: absolute;
@@ -83,7 +98,28 @@ body{
     color:  #2ecc71;
 }
 
-.form-control.error i.fa-exclamation-circle{
+.form-control.blank i.fa-exclamation-circle{
+    visibility: visible;
+    color:  #e74c3c;
+}
+
+.form-control.nolow i.fa-exclamation-circle{
+    visibility: visible;
+    color:  #e74c3c;
+}
+.form-control.noup i.fa-exclamation-circle{
+    visibility: visible;
+    color:  #e74c3c;
+}
+.form-control.nonum i.fa-exclamation-circle{
+    visibility: visible;
+    color:  #e74c3c;
+}
+.form-control.nomatch i.fa-exclamation-circle{
+    visibility: visible;
+    color:  #e74c3c;
+}
+.form-control.noeight i.fa-exclamation-circle{
     visibility: visible;
     color:  #e74c3c;
 }
@@ -96,19 +132,93 @@ body{
     left: 0;
 }
 
-.form-control.error small{
+.form-control.blank small{
     visibility: visible;
     color:  #e74c3c;
 
 }
 
+.form-control.nolow small{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+.form-control.noup small{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+.form-control.nonum small{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+
+.form-control.noeight small{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+
+.form-control small{
+    visibility: hidden;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control ul li{
+    position: relative;
+    color: #0d191a;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.blank ul li{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+.form-control.nonum ul li.number-char{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+
+.form-control.nolow ul li.lowercase-char{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+
+.form-control.noup ul li.uppercase-char{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+.form-control.noeight ul li.eight-char{
+    visibility: visible;
+    color:  #e74c3c;
+
+}
+
+
+
+
 .form button{
-    background-color: blanchedalmond;
-    border: 2px solid blanchedalmond;
+    background-color: #0d191a;
+    border: 2px solid #0d191a;
     font-family: 'Montserrat', sans-serif;
     border-radius: 8px;
     font-size: 16px;
-    color: blac;
+    color: white;
     display: block;
     padding: 10px;
     width: 100%;
@@ -116,11 +226,11 @@ body{
 
 .form .message {
     margin: 15px 0 0;
-    color: blanchedalmond;
+    color: #0d191a;
     font-size: 12px;
   }
   .form .message a {
-    color: blanchedalmond;
+    color: #0d191a;
     text-decoration: none;
     text-decoration: underline;
   }
