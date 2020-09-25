@@ -17,7 +17,10 @@ function setErrorFor(input, message, mode){
 
 
 function setSuccessFor(input) {
-	const formControl = input.parentElement;
+    const formControl = input.parentElement;
+    const small = formControl.querySelector('small');
+
+    small.innerText = '';
 	formControl.className = 'form-control success';
 }
     
@@ -34,7 +37,7 @@ function checkInputs(){
     }
 
     if(passwordValue === '') {
-        setErrorFor(password, 'ERROR: Password cannot be blank', "blank");
+        setErrorFor(password, 'ERROR: Password cannot be empty.', "blank");
         message2.setAttribute('aria-hidden', 'false');
 	}else {
         setSuccessFor(password);
