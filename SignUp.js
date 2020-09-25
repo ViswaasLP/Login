@@ -17,8 +17,8 @@ userpass = 0;
 passpass = 0;
 pass2pass = 0;
 
-
-function setErrorFor(input, message, mode){
+// errorcase() handles the case when the form fields are invalid.
+function errorcase(input, message, mode){
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
 
@@ -27,6 +27,7 @@ function setErrorFor(input, message, mode){
     formControl.className = 'form-control ' + mode;
 };
 
+//checkInputs() checks if the form fields contain valid/invalid inputs.
 function checkInputs(){
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
@@ -36,33 +37,33 @@ function checkInputs(){
 
 
     if (usernameValue === ''){
-        setErrorFor(username, "ERROR: Username cannot be empty.", "blank")
+        errorcase(username, "ERROR: Username cannot be empty.", "blank")
         usererror.setAttribute('aria-hidden', 'false');
         userpass = 0;
     }else{
-        setSuccessFor(username);
+        successcase(username);
         usererror.setAttribute('aria-hidden', 'true');
         userpass = 1;
     }
 
 
     if (firstValue === ''){
-        setErrorFor(first, "ERROR: First name cannot be empty.", "blank")
+        errorcase(first, "ERROR: First name cannot be empty.", "blank")
         firsterror.setAttribute('aria-hidden', 'false');
         firstpass = 0;
     }else{
-        setSuccessFor(first);
+        successcase(first);
         firsterror.setAttribute('aria-hidden', 'true');
         firstpass = 1;
     } 
     
     
     if (lastVaiue === ''){
-        setErrorFor(last, "ERROR: Last name cannot be empty.", "blank")
+        errorcase(last, "ERROR: Last name cannot be empty.", "blank")
         lasterror.setAttribute('aria-hidden', 'false');
         lastpass = 0;
     }else{
-        setSuccessFor(last);
+        successcase(last);
         lasterror.setAttribute('aria-hidden', 'true');
         lastpass = 1;
     }
@@ -74,41 +75,41 @@ function checkInputs(){
     passwordLength = passwordValue.length;
 
     if(passwordValue === '') {
-        setErrorFor(password, 'ERROR: Password cannot be blank', "blank");
+        errorcase(password, 'ERROR: Password cannot be blank', "blank");
         passerror.setAttribute('aria-hidden', 'false');
         passpass = 0;
 	}else if(!(islow)){
-        setErrorFor(password, 'ERROR: Password does not have lowercase letters', "nolow");
+        errorcase(password, 'ERROR: Password does not have lowercase letters', "nolow");
         passerror.setAttribute('aria-hidden', 'false');
         passpass = 0;
     }else if(!(isup)){
-        setErrorFor(password, 'ERROR: Password does not have uppercase letters', "noup");
+        errorcase(password, 'ERROR: Password does not have uppercase letters', "noup");
         passerror.setAttribute('aria-hidden', 'false');
         passpass = 0;
     }else if(!(isnum)){
-        setErrorFor(password, 'ERROR: Password does not have numbers', "nonum");
+        errorcase(password, 'ERROR: Password does not have numbers', "nonum");
         passerror.setAttribute('aria-hidden', 'false');
         passpass = 0;
     }else if(passwordLength<8){
-        setErrorFor(password, 'ERROR: Password must be equal or greater than 8 characters', "noeight");
+        errorcase(password, 'ERROR: Password must be equal or greater than 8 characters', "noeight");
         passerror.setAttribute('aria-hidden', 'false');
         passpass = 0;
     }   else {
-        setSuccessFor(password);
+        successcase(password);
         passerror.setAttribute('aria-hidden', 'true');
         passpass = 1;
 	}
 	
 	if(password2Value === '') {
-        setErrorFor(password2, 'ERROR: Please confirm password', "blank");
+        errorcase(password2, 'ERROR: Please confirm password', "blank");
         pass2error.setAttribute('aria-hidden', 'false');
         pass2pass = 0;
 	} else if(passwordValue !== password2Value) {
-        setErrorFor(password2, 'ERROR: Passwords do not match', "nomatch");
+        errorcase(password2, 'ERROR: Passwords do not match', "nomatch");
         pass2error.setAttribute('aria-hidden', 'false');
         pass2pass = 0;
 	} else{
-        setSuccessFor(password2);
+        successcase(password2);
         pass2pass = 1;
         if(userpass === 1 && lastpass === 1 && firstpass === 1 && passpass === 1 && pass2pass === 1 ){
             alert("Sign Up successful! However, please use 'level' and 'Access123'");
@@ -117,7 +118,8 @@ function checkInputs(){
 	}
 };
 
-function setSuccessFor(input) {
+// successcase() is the case when the form field is valid
+function successcase(input) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
 

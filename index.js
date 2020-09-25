@@ -6,7 +6,8 @@ const message2 = document.getElementById('message2');
 
 flag = 0;
 
-function setErrorFor(input, message, mode){
+// errorcase() handles the case when the form fields are invalid.
+function errorcase(input, message, mode){
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
 
@@ -15,40 +16,42 @@ function setErrorFor(input, message, mode){
     formControl.className = 'form-control ' + mode;
 };
 
-
-function setSuccessFor(input) {
+// successcase() is the case when the form field is valid
+function successcase(input) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
 
     small.innerText = '';
 	formControl.className = 'form-control success';
 }
-    
+
+//checkInputs() checks if the form fields contain valid/invalid inputs.
 function checkInputs(){
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
     if (usernameValue === ''){
-        setErrorFor(username, "ERROR: Username cannot be empty.", "blank")
+        errorcase(username, "ERROR: Username cannot be empty.", "blank")
         message1.setAttribute('aria-hidden', 'false');
         flag = 1;
     }else{
-        setSuccessFor(username);
+        successcase(username);
         message1.setAttribute('aria-hidden', 'true');
     }
 
     if(passwordValue === '') {
-        setErrorFor(password, 'ERROR: Password cannot be empty.', "blank");
+        errorcase(password, 'ERROR: Password cannot be empty.', "blank");
         message2.setAttribute('aria-hidden', 'false');
 	}else {
-        setSuccessFor(password);
+        successcase(password);
         message2.setAttribute('aria-hidden', 'true');
     }
 };
+
 form.addEventListener('submit', e => {
     e.preventDefault();
 	if(username.value==="level" && password.value === "Access123"){
 
-        alert("Hello level! You are now logged in!");
+        alert("Hello level! You have signed in!");
         location.reload();
         
     }else if((username.value!="level" && password.value != '' && username.value!='') || (username.value==="level" && password.value != "Access123"&& password.value != '' )){
